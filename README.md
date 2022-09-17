@@ -1,2 +1,2 @@
 # Javascript-Music
-A music-player web application
+A music-playing web application
