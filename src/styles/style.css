@@ -1,0 +1,163 @@
+body {
+  background-color: #1b1b1b;
+}
+
+img {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-user-drag: none;
+}
+
+h1, h3 {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: rgb(196, 196, 196);
+}
+
+input[type=search]::-webkit-search-decoration,
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-results-button,
+input[type=search]::-webkit-search-results-decoration {
+  display: none;
+}
+
+#header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  background-image: linear-gradient(#343434, #262626);
+  background-image: -webkit-linear-gradient(#343434, #262626);
+  width: 100%;
+  height: 80px;
+  left: 0px;
+  top: 0px;
+}
+
+#left_section_h {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+#left_section_h h1 {
+  margin-left: 5px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+#header_tools {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+  gap: 1rem;
+}
+#header_tools h3 {
+  margin: 5px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  transition: color 0.2s;
+}
+#header_tools h3:hover {
+  cursor: pointer;
+  color: rgb(152, 152, 152);
+}
+#header_tools #album_search_bar {
+  flex-shrink: 1;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  width: 40%;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  color: rgb(128, 128, 128);
+  transform: translate(0, 1px);
+}
+
+#link_to_repo {
+  filter: grayscale(100%);
+  filter: brightness(80%);
+  transition: filter 0.2s;
+}
+
+#link_to_repo:hover {
+  cursor: pointer;
+  filter: brightness(100%);
+}
+
+#footer {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(#343434, #262626);
+  background-image: -webkit-linear-gradient(#343434, #262626);
+  position: fixed;
+  width: 100%;
+  height: 120px;
+  left: 0px;
+  bottom: 0px;
+}
+#footer .song_length_slider {
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  top: -3px;
+  background: #656565;
+  accent-color: #656565;
+  transition: height 0.2s;
+}
+#footer .song_length_slider:hover {
+  height: 6px;
+  cursor: pointer;
+}
+
+#song_name_and_tools {
+  text-align: center;
+}
+
+#song_name {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  margin-top: 0px;
+}
+
+#song_tools {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+}
+#song_tools button {
+  outline: none;
+  border: none;
+  border-radius: 50px;
+  background-image: linear-gradient(#e0e0e0, #939393);
+  background-image: -webkit-linear-gradient(#e0e0e0, #939393);
+  width: 40px;
+  height: 40px;
+}
+#song_tools button img {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  filter: brightness(20%);
+}
+#song_tools button:hover {
+  cursor: pointer;
+  background-image: linear-gradient(#bbbbbb, #808080);
+  background-image: -webkit-linear-gradient(#bbbbbb, #808080);
+}
+#song_tools #shuffle_btn, #song_tools #loop_btn {
+  opacity: 0.4;
+}
+#song_tools #play_song_btn {
+  width: 50px;
+  height: 50px;
+}/*# sourceMappingURL=style.css.map */

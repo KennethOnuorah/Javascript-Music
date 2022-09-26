@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Music</title>
+        <link href="./styles/style.css" rel="stylesheet">
+        <link rel="icon" href="images/app_icon.png">
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <noscript>You need to enable Javascript to use this application.</noscript>
+        <div id="header">
+            <div id="left_section_h">
+                <img src="images/logos/app_logo.png" height="50px" width="50px">
+                <h1>Music</h1>
+                <div id="header_tools">
+                    <h3>New album</h3>
+                    <!-- <h3>Back</h3> -->
+                    <!-- <h3>Confirm deletion</h3> -->
+                    <h3>Delete album</h3>
+                    <input type="search" placeholder="Search albums..." id="album_search_bar">
+                </div>
+            </div>
+            <a href="https://github.com/KennethOnuorah/Javascript-Music" target="_blank">
+                <img src="images/logos/github_logo.png" height="50px" width="50px" style="margin-right: 20px;" id="link_to_repo">
+            </a>
+        </div>
+        <div id="footer">
+            <input type="range" min="0" max="10000" value="0" class="song_length_slider">
+            <div id="song_name_and_tools">
+                <h3 id="song_name">Nirvana - Big Cheese</h3>
+                <div id="song_tools">
+                    <button id="shuffle_btn" title="Toggle shuffle mode">
+                        <img src="images/icons/shuffle_icon.png" height="15px" width="15px" style="transform: translate(0px, 2px);">
+                    </button>
+                    <button id="prev_song_btn" title="Previous song">
+                        <img src="images/icons/skip_icon2.png" height="15px" width="18px" style="transform: translate(-1px, 2px);">
+                    </button>
+                    <button id="play_song_btn" title="Play">
+                        <img src="images/icons/play_icon.png" height="20px" width="20px" style="transform: translate(3px, 2px);">
+                    </button>
+                    <button id="next_song_btn" title="Skip song">
+                        <img src="images/icons/skip_icon.png" height="15px" width="18px" style="transform: translate(1px, 2px);">
+                    </button>
+                    <button id="loop_btn" title="Toggle album looping">
+                        <img src="images/icons/loop_icon.png" height="15px" width="20px" style="transform: translate(0px, 2px);">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
