@@ -3,33 +3,58 @@
     <head>
         <title>Music</title>
         <link href="./styles/style.css" rel="stylesheet">
-        <link rel="icon" href="images/app_icon.png">
+        <link rel="icon" href="images/logos/app_logo.png">
         <meta charset="UTF-8">
     </head>
     <body>
-        <noscript>You need to enable Javascript to use this application.</noscript>
+        <noscript>This application requires Javascript to work.</noscript>
+        <!--HEADER-->
         <div id="header">
-            <div id="left_section_h">
+            <div id="left_section">
                 <img src="images/logos/app_logo.png" height="50px" width="50px">
                 <h1>Music</h1>
                 <div id="header_tools">
-                    <h3>New album</h3>
-                    <!-- <h3>Back</h3> -->
-                    <!-- <h3>Confirm deletion</h3> -->
-                    <h3>Delete album</h3>
+                    <button id="create_new_album">New album</button>
                     <input type="search" placeholder="Search albums..." id="album_search_bar">
                 </div>
             </div>
-            <a href="https://github.com/KennethOnuorah/Javascript-Music" target="_blank">
-                <img src="images/logos/github_logo.png" height="50px" width="50px" style="margin-right: 20px;" id="link_to_repo">
+            <a href="https://github.com/KennethOnuorah/Javascript-Music" target="_blank" style="margin-right: 20px;">
+                <img src="images/logos/github_logo.png" height="50px" width="50px" id="link_to_repo" title="App repository">
             </a>
         </div>
+        <div id="album_modal" class="album_modal">
+            <div class="album_modal_content">
+                <div class="top_section">
+                    <div class="cover_section">
+                        <img src="images/default_album_cover.png" height="250px" width="250px">
+                    </div>
+                    <div class="info_section">
+                        <h1>Default Album</h1>
+                        <h3>Artist(s): Unknown artist</h3>
+                        <h3>Year: Unknown year</h3>
+                    </div>
+                </div>
+                <div class="bottom_section">
+                    <button>Play album</button>
+                    <button>Change cover</button>
+                    <button>Delete album</button>
+                </div>
+            </div>
+        </div>
+        <!--ALBUM SECTION-->
+        <div id="album_grid_section">
+            <div class="grid_item">
+                <input type="image" class="album" id="default_album" src="images/default_album_cover.png" alt="default_album" height="250px" width="250px">
+                <h3>Default Album</h3>
+            </div>
+        </div>
+        <!--FOOTER-->
         <div id="footer">
             <input type="range" min="0" max="10000" value="0" class="song_length_slider">
             <div id="song_name_and_tools">
-                <h3 id="song_name">Nirvana - Big Cheese</h3>
+                <h3 id="song_name">_ - _</h3>
                 <div id="song_tools">
-                    <button id="shuffle_btn" title="Toggle shuffle mode">
+                    <button id="shuffle_btn" title="Enable shuffle mode">
                         <img src="images/icons/shuffle_icon.png" height="15px" width="15px" style="transform: translate(0px, 2px);">
                     </button>
                     <button id="prev_song_btn" title="Previous song">
@@ -41,8 +66,8 @@
                     <button id="next_song_btn" title="Skip song">
                         <img src="images/icons/skip_icon.png" height="15px" width="18px" style="transform: translate(1px, 2px);">
                     </button>
-                    <button id="loop_btn" title="Toggle album looping">
-                        <img src="images/icons/loop_icon.png" height="15px" width="20px" style="transform: translate(0px, 2px);">
+                    <button id="loop_btn" title="Enable album looping">
+                        <img src="images/icons/loop_icon.png" height="28px" width="28px" style="transform: translate(0px, 2px);">
                     </button>
                 </div>
             </div>
