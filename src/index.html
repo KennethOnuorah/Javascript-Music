@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Music</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="./styles/style.css" rel="stylesheet">
         <link rel="icon" href="images/logos/app_logo.png">
-        <meta charset="UTF-8">
+        <title>Music</title>
     </head>
     <body>
         <noscript>This application requires Javascript to work.</noscript>
@@ -14,14 +16,16 @@
                 <img src="images/logos/app_logo.png" height="50px" width="50px">
                 <h1>Music</h1>
                 <div id="header_tools">
-                    <button id="create_new_album">New album</button>
+                    <input type="file" id="upload_album" title="Upload new album" webkitdirectory mozdirectory msdirectory odirectory directory multiple hidden/>
+                    <label for="upload_album">Upload album</label>
                     <input type="search" placeholder="Search albums..." id="album_search_bar">
                 </div>
             </div>
-            <a href="https://github.com/KennethOnuorah/Javascript-Music" target="_blank" style="margin-right: 20px;">
+            <a href="https://github.com/KennethOnuorah/Javascript-Music" target="_blank" style="margin-right: 20px; width: 50px; height: 50px;">
                 <img src="images/logos/github_logo.png" height="50px" width="50px" id="link_to_repo" title="App repository">
             </a>
         </div>
+        <!--MODAL-->
         <div id="album_modal" class="album_modal">
             <div class="album_modal_content">
                 <div class="top_section">
@@ -43,10 +47,10 @@
         </div>
         <!--ALBUM SECTION-->
         <div id="album_grid_section">
-            <div class="grid_item">
+            <!-- <div class="grid_item">
                 <input type="image" class="album" id="default_album" src="images/default_album_cover.png" alt="default_album" height="250px" width="250px">
                 <h3>Default Album</h3>
-            </div>
+            </div> -->
         </div>
         <!--FOOTER-->
         <div id="footer">
@@ -73,4 +77,5 @@
             </div>
         </div>
     </body>
+    <script src="main.js"></script>
 </html>
