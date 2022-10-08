@@ -5,7 +5,9 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="./styles/style.css" rel="stylesheet">
-        <link rel="icon" href="images/logos/app_logo.png">
+        <link rel="icon" href="../images/logos/app_logo.png">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jsmediatags/3.9.5/jsmediatags.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/localforage/1.10.0/localforage.min.js"></script>
         <title>Music</title>
     </head>
     <body>
@@ -13,42 +15,46 @@
         <!--HEADER-->
         <div id="header">
             <div id="left_section">
-                <img src="images/logos/app_logo.png" height="50px" width="50px">
+                <img src="../images/logos/app_logo.png" height="50px" width="50px">
                 <h1>Music</h1>
                 <div id="header_tools">
-                    <input type="file" id="upload_album" title="Upload new album" webkitdirectory mozdirectory msdirectory odirectory directory multiple hidden/>
+                    <input type="file" id="upload_album" webkitdirectory="webkitDirectory" hidden/>
                     <label for="upload_album">Upload album</label>
                     <input type="search" placeholder="Search albums..." id="album_search_bar">
                 </div>
             </div>
             <a href="https://github.com/KennethOnuorah/Javascript-Music" target="_blank" style="margin-right: 20px; width: 50px; height: 50px;">
-                <img src="images/logos/github_logo.png" height="50px" width="50px" id="link_to_repo" title="App repository">
+                <img src="../images/logos/github_logo.png" height="50px" width="50px" id="link_to_repo" title="App repository">
             </a>
         </div>
-        <!--MODAL-->
+        <!--MODAL & LOADING SCREEN-->
         <div id="album_modal" class="album_modal">
             <div class="album_modal_content">
                 <div class="top_section">
                     <div class="cover_section">
-                        <img src="images/default_album_cover.png" height="250px" width="250px">
+                        <img src="../images/default_album_cover.png" height="250px" width="250px">
                     </div>
                     <div class="info_section">
                         <h1>Default Album</h1>
                         <h3>Artist(s): Unknown artist</h3>
-                        <h3>Year: Unknown year</h3>
+                        <h3>Year:</h3>
                     </div>
                 </div>
                 <div class="bottom_section">
                     <button>Play album</button>
-                    <button>Change cover</button>
                     <button>Delete album</button>
+                    <button>Change cover</button>
                 </div>
             </div>
+        </div>
+        <div id="loading_screen" class="loading_screen">
+            <img src="../images/gifs/loading.gif" height="75px" width="75px" style="opacity: 0.5;">
+            <h3>Loading...</h3>
         </div>
         <!--ALBUM SECTION-->
         <div id="album_grid_section">
             <!-- <div class="grid_item">
-                <input type="image" class="album" id="default_album" src="images/default_album_cover.png" alt="default_album" height="250px" width="250px">
+                <input type="image" class="album" id="default_album" src="../images/default_album_cover.png" alt="default_album" height="250px" width="250px">
                 <h3>Default Album</h3>
             </div> -->
         </div>
@@ -59,23 +65,23 @@
                 <h3 id="song_name">_ - _</h3>
                 <div id="song_tools">
                     <button id="shuffle_btn" title="Enable shuffle mode">
-                        <img src="images/icons/shuffle_icon.png" height="15px" width="15px" style="transform: translate(0px, 2px);">
+                        <img src="../images/icons/shuffle_icon.png" height="15px" width="15px" style="transform: translate(0px, 2px);">
                     </button>
                     <button id="prev_song_btn" title="Previous song">
-                        <img src="images/icons/skip_icon2.png" height="15px" width="18px" style="transform: translate(-1px, 2px);">
+                        <img src="../images/icons/skip_icon2.png" height="15px" width="18px" style="transform: translate(-1px, 2px);">
                     </button>
                     <button id="play_song_btn" title="Play">
-                        <img src="images/icons/play_icon.png" height="20px" width="20px" style="transform: translate(3px, 2px);">
+                        <img src="../images/icons/play_icon.png" height="20px" width="20px" style="transform: translate(3px, 2px);">
                     </button>
                     <button id="next_song_btn" title="Skip song">
-                        <img src="images/icons/skip_icon.png" height="15px" width="18px" style="transform: translate(1px, 2px);">
+                        <img src="../images/icons/skip_icon.png" height="15px" width="18px" style="transform: translate(1px, 2px);">
                     </button>
                     <button id="loop_btn" title="Enable album looping">
-                        <img src="images/icons/loop_icon.png" height="28px" width="28px" style="transform: translate(0px, 2px);">
+                        <img src="../images/icons/loop_icon.png" height="28px" width="28px" style="transform: translate(0px, 2px);">
                     </button>
                 </div>
             </div>
         </div>
     </body>
-    <script src="main.js"></script>
+    <script type="module" src="main.js"></script>
 </html>
