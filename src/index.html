@@ -6,8 +6,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="./styles/style.css" rel="stylesheet">
         <link rel="icon" href="../images/logos/app_logo.png">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jsmediatags/3.9.5/jsmediatags.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/localforage/1.10.0/localforage.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jsmediatags/3.9.5/jsmediatags.min.js"></script>
         <title>Music</title>
     </head>
     <body>
@@ -20,15 +20,17 @@
                 <div id="header_tools">
                     <input type="file" id="upload_album" webkitdirectory="webkitDirectory" hidden/>
                     <label for="upload_album">Upload album</label>
-                    <input type="search" placeholder="Search albums..." id="album_search_bar">
+                    <div id="search_area">
+                        <input type="text" placeholder="Search albums..." id="album_search_bar">
+                    </div>
                 </div>
             </div>
-            <a href="https://github.com/KennethOnuorah/Javascript-Music" target="_blank" style="margin-right: 20px; width: 50px; height: 50px;">
+            <a href="https://github.com/KennethOnuorah/Javascript-Music" target="_blank" style="margin: 0px 20px 0px 20px; width: 50px; height: 50px;">
                 <img src="../images/logos/github_logo.png" height="50px" width="50px" id="link_to_repo" title="App repository">
             </a>
         </div>
         <!--ALBUM MODAL & LOADING SCREEN-->
-        <div id="album_modal" class="album_modal">
+        <div class="album_modal">
             <div class="album_modal_content">
                 <div class="top_section">
                     <div class="cover_section">
@@ -47,9 +49,9 @@
                 </div>
             </div>
         </div>
-        <div id="loading_screen" class="loading_screen">
+        <div class="loading_screen" id="loading_screen">
             <img src="../images/gifs/loading.gif" height="75px" width="75px" style="opacity: 0.5;">
-            <h3>Loading...</h3>
+            <h3 id="loading_text"></h3>
         </div>
         <!--ALBUM SECTION-->
         <div id="album_grid_section">
