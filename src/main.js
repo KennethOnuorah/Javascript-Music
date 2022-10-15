@@ -1,11 +1,14 @@
 import { validateAlbum, extractMetaAndStoreB64, createNewAlbum } from "../lib/saveManager.js"
+import { openAlbumModal } from "../lib/albumModal.js"
+
 const loadingScreen = document.getElementById("loading_screen")
 const loadingScreenText = document.getElementById("loading_text")
 let isLoading = false
-let albumList = document.querySelectorAll("album")
+
+let albumList = document.querySelectorAll(".grid_item")
 const uploadBtn = document.getElementById("upload_album")
 
-uploadBtn.addEventListener("change", async(e) => {
+uploadBtn.addEventListener("change", async function(e){
     isLoading = true
     try{
         loadingScreen.style.display = "flex"
@@ -22,25 +25,25 @@ uploadBtn.addEventListener("change", async(e) => {
     catch(error){
         loadingScreen.style.opacity = "0"
         loadingScreen.style.display = "none"
-        isLoading = false
         console.error(error)
         alert(error)
     }
     finally{
         isLoading = false
+        updateAlbumList()
     }
 })
-window.addEventListener("keyup", (e) => {
+window.addEventListener("keyup", function(e){
     //Prevent tabbing while loading (Not working yet)
     if(e.code == "Tab" && isLoading){
         e.preventDefault()
     }
 })
-export function updateAlbumList(){
-    albumList = document.querySelectorAll("album")
+function updateAlbumList(){
+    const albumList = document.querySelectorAll(".grid_item")
     for (const album of albumList){
-        album.addEventListener("click", () => {
-            //Open album modal
+        album.addEventListener("click", function(){
+            openAlbumModal(album.id)
         })
     }
 }

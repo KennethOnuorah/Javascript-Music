@@ -37,15 +37,17 @@
                         <img src="../images/default_album_cover.png" height="250px" width="250px">
                     </div>
                     <div class="info_section">
-                        <h1>Default Album</h1>
-                        <h3>Artist(s): Unknown artist</h3>
-                        <h3>Year:</h3>
+                        <h1 class="modal_title">-</h1>
+                        <h3 class="modal_artists">Artist(s):</h3>
+                        <h3 class="modal_years">Recorded:</h3>
                     </div>
                 </div>
                 <div class="bottom_section">
                     <button>Play album</button>
                     <button>Delete album</button>
-                    <button>Change cover</button>
+                    <input type="file" id="change_cover" accept=".png, .jpg, .jpeg" hidden/>
+                    <label for="change_cover">Change cover</label>
+                    <!-- <button>Change cover</button> -->
                 </div>
             </div>
         </div>
