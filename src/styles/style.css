@@ -50,7 +50,7 @@ input[type=search]::-webkit-search-results-decoration {
   left: 0px;
   top: 0px;
   z-index: 2;
-  box-shadow: 0px 10px 10px 5px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 5px 10px 5px rgba(0, 0, 0, 0.1);
 }
 
 #left_section {
@@ -80,7 +80,6 @@ input[type=search]::-webkit-search-results-decoration {
   border: none;
   background-color: transparent;
   color: rgb(196, 196, 196);
-  transform: translate(0, 1px);
   transition: color 0.2s;
 }
 #header_tools label:hover {
@@ -267,7 +266,7 @@ input[type=search]::-webkit-search-results-decoration {
   background-image: -webkit-linear-gradient(#2b2b2b, #1a1a1a);
   border-radius: 25px;
   width: 550px;
-  height: 325px;
+  min-height: 325px;
   padding: 20px;
 }
 .album_modal_content img {
@@ -288,7 +287,7 @@ input[type=search]::-webkit-search-results-decoration {
   margin-top: 20px;
   gap: 1rem;
 }
-.album_modal_content .bottom_section button {
+.album_modal_content .bottom_section button, .album_modal_content .bottom_section label {
   height: 50px;
   width: 150px;
   border-radius: 50px;
@@ -299,10 +298,15 @@ input[type=search]::-webkit-search-results-decoration {
   background-image: linear-gradient(#e0e0e0, #939393);
   background-image: -webkit-linear-gradient(#e0e0e0, #939393);
 }
-.album_modal_content .bottom_section button:hover {
+.album_modal_content .bottom_section button:hover, .album_modal_content .bottom_section label:hover {
   cursor: pointer;
   background-image: linear-gradient(#a5a5a5, #606060);
   background-image: -webkit-linear-gradient(#a5a5a5, #606060);
+}
+.album_modal_content .bottom_section label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .loading_screen {
