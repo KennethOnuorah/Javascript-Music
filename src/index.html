@@ -12,6 +12,7 @@
     </head>
     <body>
         <noscript>This application requires Javascript to work.</noscript>
+        <audio src=""></audio>
         <!--HEADER-->
         <div id="header">
             <div id="left_section">
@@ -34,7 +35,7 @@
             <div class="album_modal_content">
                 <div class="top_section">
                     <div class="cover_section">
-                        <img src="../images/default_album_cover.png" height="250px" width="250px">
+                        <img class="modal_cover" src="../images/default_album_cover.png" height="250px" width="250px">
                     </div>
                     <div class="info_section">
                         <h1 class="modal_title">-</h1>
@@ -44,10 +45,9 @@
                 </div>
                 <div class="bottom_section">
                     <button>Play album</button>
-                    <button>Delete album</button>
+                    <button id="delete_album">Delete album</button>
                     <input type="file" id="change_cover" accept=".png, .jpg, .jpeg" hidden/>
-                    <label for="change_cover">Change cover</label>
-                    <!-- <button>Change cover</button> -->
+                    <label for="change_cover" id="change_cover_label" tabindex="0">Change cover</label>
                 </div>
             </div>
         </div>

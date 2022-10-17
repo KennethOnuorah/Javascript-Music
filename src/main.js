@@ -1,14 +1,23 @@
 import { validateAlbum, extractMetaAndStoreB64, createNewAlbum } from "../lib/saveManager.js"
-import { openAlbumModal } from "../lib/albumModal.js"
+import { load } from "../lib/loadManager.js"
+import { openAlbumModal, modalOpen } from "../lib/albumModal.js"
 
 const loadingScreen = document.getElementById("loading_screen")
 const loadingScreenText = document.getElementById("loading_text")
 let isLoading = false
 
-let albumList = document.querySelectorAll(".grid_item")
 const uploadBtn = document.getElementById("upload_album")
 
-uploadBtn.addEventListener("change", async function(e){
+window.addEventListener("load", () => {
+    load().then(() => { updateAlbumList() })
+})
+window.addEventListener("keyup", (e) => {
+    //Prevent tabbing while loading (Not working yet)
+    if(e.code == "Tab" && isLoading){
+        e.preventDefault()
+    }
+})
+uploadBtn.addEventListener("change", async(e) => {
     isLoading = true
     try{
         loadingScreen.style.display = "flex"
@@ -26,19 +35,15 @@ uploadBtn.addEventListener("change", async function(e){
         loadingScreen.style.opacity = "0"
         loadingScreen.style.display = "none"
         console.error(error)
-        alert(error)
     }
     finally{
         isLoading = false
         updateAlbumList()
     }
 })
-window.addEventListener("keyup", function(e){
-    //Prevent tabbing while loading (Not working yet)
-    if(e.code == "Tab" && isLoading){
-        e.preventDefault()
-    }
-})
+/**
+ * Update the list of albums the user has created
+ */
 function updateAlbumList(){
     const albumList = document.querySelectorAll(".grid_item")
     for (const album of albumList){

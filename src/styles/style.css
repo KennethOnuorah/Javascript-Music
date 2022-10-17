@@ -210,7 +210,7 @@ input[type=search]::-webkit-search-results-decoration {
 }
 #album_grid_section .grid_item input:hover {
   cursor: pointer;
-  filter: blur(4px) brightness(80%);
+  filter: blur(4px) brightness(65%);
 }
 #album_grid_section .grid_item input:hover + h3 {
   opacity: 1;
