@@ -12,7 +12,7 @@
     </head>
     <body>
         <noscript>This application requires Javascript to work.</noscript>
-        <audio src=""></audio>
+        <audio src="" id="song"></audio>
         <!--HEADER-->
         <div id="header">
             <div id="left_section">
@@ -44,7 +44,7 @@
                     </div>
                 </div>
                 <div class="bottom_section">
-                    <button>Play album</button>
+                    <button id="play_album">Play album</button>
                     <button id="delete_album">Delete album</button>
                     <input type="file" id="change_cover" accept=".png, .jpg, .jpeg" hidden/>
                     <label for="change_cover" id="change_cover_label" tabindex="0">Change cover</label>
@@ -57,16 +57,16 @@
         </div>
         <!--ALBUM SECTION-->
         <div id="album_grid_section">
-            <!-- <div class="grid_item">
-                <input type="image" class="album" id="default_album" src="../images/default_album_cover.png" alt="default_album" height="250px" width="250px">
-                <h3>Default Album</h3>
-            </div> -->
+
         </div>
         <!--FOOTER-->
         <div id="footer">
-            <input type="range" min="0" max="10000" value="0" class="song_length_slider">
+            <div class="time_display">
+                <span class="time_display_text">0:00</span>
+            </div>
+            <input type="range" min="0" max="0" value="0" class="song_length_slider">
             <div id="song_name_and_tools">
-                <h3 id="song_name">_ - _</h3>
+                <h3 id="artist_and_song_name">-</h3>
                 <div id="song_tools">
                     <button id="shuffle_btn" title="Enable shuffle mode">
                         <img src="../images/icons/shuffle_icon.png" height="15px" width="15px" style="transform: translate(0px, 2px);">
@@ -75,14 +75,18 @@
                         <img src="../images/icons/skip_icon2.png" height="15px" width="18px" style="transform: translate(-1px, 2px);">
                     </button>
                     <button id="play_song_btn" title="Play">
-                        <img src="../images/icons/play_icon.png" height="20px" width="20px" style="transform: translate(3px, 2px);">
+                        <img src="../images/icons/play_icon.png" height="20px" width="20px" style="transform: translate(0.7px, 2px);" id="play_icon">
                     </button>
-                    <button id="next_song_btn" title="Skip song">
+                    <button id="skip_song_btn" title="Skip song">
                         <img src="../images/icons/skip_icon.png" height="15px" width="18px" style="transform: translate(1px, 2px);">
                     </button>
-                    <button id="loop_btn" title="Enable album looping">
-                        <img src="../images/icons/loop_icon.png" height="28px" width="28px" style="transform: translate(0px, 2px);">
+                    <button id="play_mode_btn" title="Repeat album">
+                        <img src="../images/icons/loop_icon1.png" height="23px" width="30px" style="transform: translate(-1px, 2px);" id="play_mode_btn_icon">
                     </button>
+                </div>
+                <div id="volume_section">
+                    <span id="volume_percentage">100%</span>
+                    <input type="range" min="0" max="100" value="100" title="Volume" id="volume_slider">
                 </div>
             </div>
         </div>
