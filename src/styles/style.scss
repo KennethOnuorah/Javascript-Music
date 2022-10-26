@@ -5,25 +5,25 @@ img{
     user-select: none;
     -webkit-user-drag: none;
 }
-h1, h3{
+h1, h3, span{
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: rgb(196, 196, 196);
 }
+
 ::-webkit-scrollbar {
     width: 15px;
+    background-color: #474747;
 }
 ::-webkit-scrollbar-thumb {
     background-image: linear-gradient(#343434, #262626);
     background-image: -o-linear-gradient(#343434, #262626);
-    background-image: -moz-linear-gradient(#343434, #262626);;
+    background-image: -moz-linear-gradient(#343434, #262626);
     background-image: -webkit-linear-gradient(#343434, #262626);
-    border-radius: 50px;
-    border: 4px solid #1b1b1b;
 }
 ::-webkit-scrollbar-thumb:hover {
     background-image: linear-gradient(#737373, #464646);
     background-image: -o-linear-gradient(#737373, #464646);
-    background-image: -moz-linear-gradient(#737373, #464646);;
+    background-image: -moz-linear-gradient(#737373, #464646);
     background-image: -webkit-linear-gradient(#737373, #464646);
 }
 input[type="search"]::-webkit-search-decoration,
@@ -103,7 +103,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 
 //FOOTER
 #footer{
-    display: inline-flex;
+    display: none; //"inline-flex" when enabled
     align-items: center;
     justify-content: center;
     background-image: linear-gradient(#343434, #262626);
@@ -112,10 +112,12 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
     background-image: -webkit-linear-gradient(#343434, #262626);
     position: fixed;
     width: 100%;
-    height: 120px;
+    min-height: 120px;
     left: 0px;
     bottom: 0px;
     z-index: 2;
+    opacity: 0;
+    transition: opacity 0.2s;
     .song_length_slider{
         position: absolute;
         width: 100%;
@@ -129,13 +131,39 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
         height: 6px;
         cursor: pointer;
     }
+    .time_display{
+        position: absolute;
+        width: 100%;
+        opacity: 0;
+        transition: opacity 0.2s;
+        span{
+            position: absolute;
+            font-weight: bold;
+            min-width: 40px;
+            height: 23px;
+            user-select: none;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+    }
 }
 #song_name_and_tools{
     text-align: center;
+    #volume_slider{
+        appearance: none;
+        width: 275px;
+        height: 3px;
+        background: #656565;
+        accent-color: #b7b7b7;
+        border-radius: 50px;
+    }
 }
-#song_name{
+#artist_and_song_name{
     user-select: none;
     margin-top: 0px;
+    margin-bottom: 8px;
 }
 #song_tools{
     display: inline-flex;
@@ -162,12 +190,21 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
         background-image: -moz-linear-gradient(#bbbbbb, #808080);
         background-image: -webkit-linear-gradient(#bbbbbb, #808080);
     }
-    #shuffle_btn, #loop_btn{
+    #shuffle_btn, #play_mode_btn{
         opacity: 0.4;
     }
     #play_song_btn{
         width: 50px;
         height: 50px;
+    }
+}
+#volume_section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    span{
+        font-weight: bold;
     }
 }
 
@@ -187,7 +224,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
         justify-content: center;
         input{
             box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.8);
-            border-radius: 25px;
+            border-radius: 5px;
             transition: filter 0.2s;
         }
         input:hover{
@@ -207,6 +244,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
             opacity: 0;
             transition: opacity 0.2s;
             padding: 0px 10px 0px 10px;
+            color: rgb(255, 255, 255);
         }
     }
 }
@@ -253,7 +291,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
     min-height: 325px;
     padding: 20px;
     img{
-        border-radius: 25px;
+        border-radius: 5px;
         box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.8);
     }
     .top_section{
@@ -296,7 +334,6 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
         }
     }
 }
-//Loading screen essentially has the same styling as '.album_modal'. So when done, just add ", .loading_screen" to it
 .loading_screen {
     display: none;
     flex-direction: column;
@@ -330,4 +367,9 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 @keyframes shift_up {
     0%{transform: translate(0%, 10%);}
     100%{transform: translate(0%, 0%);}
+}
+@keyframes glowing_outline {
+    0%{border: 2px solid rgb(240, 218, 49); border-radius: 5px;}
+    50%{border: 2px solid rgba(240, 218, 49, 0.3); border-radius: 5px;}
+    100%{border: 2px solid rgb(240, 218, 49); border-radius: 5px;}
 }
