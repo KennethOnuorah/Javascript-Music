@@ -47,7 +47,7 @@ searchBar.addEventListener("input", () => {
     let undesiredResults = 0
     const albumList = document.querySelectorAll(".grid_item")
     for(const album of albumList){
-        album.style.display = album.id.includes(searchBar.value) ? "flex" : "none"
+        album.style.display = album.id.toLowerCase().includes(searchBar.value.toLowerCase()) ? "flex" : "none"
         if(document.getElementById(album.id).style.display == "none") 
             undesiredResults += 1
     }
