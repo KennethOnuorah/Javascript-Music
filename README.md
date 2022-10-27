@@ -10,7 +10,7 @@
 
 ## About the project 🔎
 
-A web application for uploading and playing all of your favorite music. Create compact and customizable notes to help keep track of your everyday needs.
+A web application for uploading and playing all of your favorite music.
 
 Languages used:
 * HTML
