@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/KennethOnuorah/Javascript-Music/blob/main/js_music_app_logo.png" width="440" height="314">
+  <img src="https://github.com/KennethOnuorah/Javascript-Music/blob/main/readme_app_logo.png" width="378" height="348">
 </p>
 
 <p align="center">
