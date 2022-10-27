@@ -12,6 +12,7 @@
     </head>
     <body>
         <noscript>This application requires Javascript to work.</noscript>
+        <h3 id="nothing_prompt">No results found</h3>
         <audio src="" id="song"></audio>
         <!--HEADER-->
         <div id="header">
@@ -22,7 +23,7 @@
                     <input type="file" id="upload_album" webkitdirectory="webkitDirectory" hidden/>
                     <label for="upload_album">Upload album</label>
                     <div id="search_area">
-                        <input type="text" placeholder="Search albums..." id="album_search_bar">
+                        <input type="text" placeholder="Search albums..." id="album_search_bar" value="">
                     </div>
                 </div>
             </div>
@@ -75,7 +76,7 @@
                         <img src="../images/icons/skip_icon2.png" height="15px" width="18px" style="transform: translate(-1px, 2px);">
                     </button>
                     <button id="play_song_btn" title="Play">
-                        <img src="../images/icons/play_icon.png" height="20px" width="20px" style="transform: translate(0.7px, 2px);" id="play_icon">
+                        <img src="../images/icons/play_icon.png" height="20px" width="20px" style="transform: translate(0.75px, 2px);" id="play_icon">
                     </button>
                     <button id="skip_song_btn" title="Skip song">
                         <img src="../images/icons/skip_icon.png" height="15px" width="18px" style="transform: translate(1px, 2px);">
