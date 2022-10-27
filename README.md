@@ -31,6 +31,7 @@ Languages used:
 ## Features 📦️
 - [x] Uploading albums from filesystem 
 - [x] Deleting albums
+- [x] Album information modal
 - [x] Music controlling
   * Playing/pausing songs
   * Unlimited skipping, replaying, and playing previous songs
