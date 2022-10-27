@@ -45,5 +45,10 @@ Languages used:
 ## Preview 👁️
 ------
 <p align="center">
+  <strong>
+    <a href="https://kennethonuorah.github.io/Javascript-Music/src/index.html">Link</a>
+  <strong>
+</p>
+<p align="center">
   <img src="https://github.com/KennethOnuorah/Javascript-Music/blob/main/app_screenshot.png" width="781" height="436">
 </p>
