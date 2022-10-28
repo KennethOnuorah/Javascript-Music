@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  A music player web application.
+  A music player web application
 </p>
 
 ------
