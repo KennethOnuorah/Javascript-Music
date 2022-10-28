@@ -50,3 +50,7 @@ Languages used:
     <img src="https://github.com/KennethOnuorah/Javascript-Music/blob/main/app_screenshot.png" width="781" height="436">
   </a>
 </p>
+
+------
+## License 📜
+[**MIT**](https://github.com/KennethOnuorah/Javascript-Music/blob/main/LICENSE)
