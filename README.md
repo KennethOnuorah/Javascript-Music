@@ -39,6 +39,7 @@ Languages used:
 - [x] Deleting albums
 - [x] Metadata reading
 - [x] Album information modal
+  * Displays the name of the album and its cover, the artist(s) who contributed to the album, and the time span the songs were recorded
 - [x] Music controlling
   * Playing/pausing songs
   * Unlimited skipping, replaying, and playing previous songs
