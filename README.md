@@ -21,6 +21,12 @@ The id3 tag information the application reads:
 2. Contributing artists
 3. Song year (optional)
 
+Acceptable file types:
+* .mp3
+* .wav
+* .ogg
+* .flac
+
 Languages used:
 * HTML
 * CSS/SCSS
@@ -29,8 +35,9 @@ Languages used:
 **Project development**: 9/27/2022 - 10/27/2022
 
 ## Features 📦️
-- [x] Uploading albums from filesystem 
+- [x] Uploading albums from filesystem
 - [x] Deleting albums
+- [x] Metadata reading
 - [x] Album information modal
 - [x] Music controlling
   * Playing/pausing songs
