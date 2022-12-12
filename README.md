@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/KennethOnuorah/Javascript-Music/blob/main/readme_app_logo.png" width="336" height="309">
+  <img src="https://github.com/KennethOnuorah/Javascript-Music/blob/main/readme_logo.png" width="336" height="309">
 </p>
 
 <p align="center">
@@ -52,13 +52,8 @@ Languages used:
 - [x] Saving and loading
 
 ## Preview 👁️
-------
-<p align="center">
-  <a href="https://kennethonuorah.github.io/Javascript-Music/src/index.html">
-    <img src="https://github.com/KennethOnuorah/Javascript-Music/blob/main/app_screenshot.png" width="781" height="436">
-  </a>
-</p>
 
-------
+![readme_preview](https://github.com/KennethOnuorah/Javascript-Music/blob/main/app_screenshot.png)
+
 ## License 📜
 [**MIT**](https://github.com/KennethOnuorah/Javascript-Music/blob/main/LICENSE)
