@@ -32,7 +32,7 @@ Languages used:
 * CSS/SCSS
 * Javascript
 
-❗❗❗ AFAIK, this application only works for chromium browsers.
+❗❗❗ This application only works for chromium browsers.
 
 **Project development**: 9/27/2022 - 10/27/2022
 
