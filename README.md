@@ -16,12 +16,12 @@ This application requires audio metadata in order to function properly! For a be
 
 If, however, you have [Spotify Premium](https://www.spotify.com/us/premium/), [Deezer Premium](https://www.deezer.com/us/offers/premium), [Pandora Premium](https://www.pandora.com/upgrade/premium), or any other premium subscription from a music streaming service, then you can easily download your playlists from there and upload them with the metadata already included. That way, you don't have to go through the trouble of editing each song's tag information.
 
-The id3 tag information the application reads:
+This application reads the following id3 tag information:
 1. Song title
 2. Contributing artists
 3. Song year (optional)
 
-Acceptable file types:
+Acceptable audio file types:
 * .mp3
 * .wav
 * .ogg
